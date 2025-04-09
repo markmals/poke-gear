@@ -1,0 +1,73 @@
+---
+import { Badge } from "@astrojs/starlight/components";
+
+export interface Props {
+    name: string;
+    image: string;
+    level: number;
+    moves: string[];
+}
+
+const { image, name, level, moves } = Astro.props;
+---
+
+<article class="card not-content">
+    <div class="col" style="text-align: center;">
+        <p class="title sl-flex">
+            <span set:html={name} />
+        </p>
+        <img src={image} />
+        <Badge text={`Level ${level}`} variant="tip" />
+    </div>
+    <div class="col">
+        <span class="title">Moves</span>
+        <ul>
+            {moves.map(move => <li>{move}</li>)}
+        </ul>
+    </div>
+</article>
+
+<style>
+    .card {
+        border: 1px solid var(--sl-color-gray-5);
+        background-color: var(--sl-color-black);
+        padding: clamp(1rem, calc(0.125rem + 3vw), 2.5rem);
+        display: flex;
+        flex-direction: row;
+        gap: clamp(0.5rem, calc(0.125rem + 1vw), 1rem);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    img {
+        height: 120px;
+    }
+
+    .col {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .title {
+        width: 100%;
+        font-weight: 600;
+        color: var(--sl-color-white);
+        line-height: var(--sl-line-height-headings);
+    }
+
+    p.title {
+        font-size: var(--sl-text-h4);
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    span.title {
+        font-size: var(--sl-text-lg);
+    }
+
+    /* :global(.sl-badge) {
+        text-align: center;
+    } */
+</style>

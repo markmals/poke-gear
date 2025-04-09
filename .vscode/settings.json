@@ -1,0 +1,83 @@
+{
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+
+    "editor.stickyScroll.enabled": true,
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
+
+    "biome.enabled": false,
+    "eslint.enable": false,
+
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[astro]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.unicodeHighlight.invisibleCharacters": false,
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        },
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[mdx]": {
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.unicodeHighlight.invisibleCharacters": false,
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        },
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.patterns": {
+        "*.css": "$(capture).css.map, $(capture).*.css",
+        ".env": "*.env, .env.*, .envrc, env.d.ts",
+        "package.json": ".github*, .prettier*, .vscode*, biome*, bun.lock*, prettier*, tsconfig.*, *.lock",
+        "readme*": "authors, backers*, changelog*, citation*, code_of_conduct*, codeowners, contributing*, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors*"
+    },
+    "files.exclude": {
+        "**/.DS_Store": true,
+        ".astro": true,
+        ".wrangler": true
+    },
+
+    "todohighlight.keywords": [
+        "MARK:",
+        {
+            "text": "FIXME:",
+            "backgroundColor": "#F14848"
+        },
+        {
+            "text": "TODO:",
+            "backgroundColor": "#3593FF"
+        }
+    ],
+    "todohighlight.defaultStyle": {
+        "backgroundColor": "#434B54",
+        "color": "#fff",
+        "borderRadius": "2px"
+    }
+}

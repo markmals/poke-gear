@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+/* ====================================== THEME ====================================== */
+
+:root {
+    --sl-font-system-mono:
+        "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+        Consolas, "Liberation Mono", "Courier New", monospace;
+
+    --sl-nav-gap: 0.25rem;
+}
+
+/* Dark mode colors. */
+:root {
+    --sl-color-accent-low: #3c1713;
+    --sl-color-accent: #bb2d26;
+    --sl-color-accent-high: #ca6862;
+    --sl-color-white: #ffffff;
+    --sl-color-gray-1: #ebeef3;
+    --sl-color-gray-2: #bfc2c9;
+    --sl-color-gray-3: #878b98;
+    --sl-color-gray-4: #545864;
+    --sl-color-gray-5: #343843;
+    --sl-color-gray-6: #232631;
+    --sl-color-black: #16181d;
+}
+
+/* Light mode colors. */
+:root[data-theme="light"] {
+    --sl-color-accent-low: #f3ccc7;
+    --sl-color-accent: #be2f28;
+    --sl-color-accent-high: #571b16;
+    --sl-color-white: #16181d;
+    --sl-color-gray-1: #232631;
+    --sl-color-gray-2: #343843;
+    --sl-color-gray-3: #545864;
+    --sl-color-gray-4: #878b98;
+    --sl-color-gray-5: #bfc2c9;
+    --sl-color-gray-6: #ebeef3;
+    --sl-color-gray-7: #f5f6f9;
+    --sl-color-black: #ffffff;
+}
+
+.sidebar-content a[href="/#"],
+.pagination-links a[href="/#"],
+details:not(:has(li)) summary {
+    opacity: 40%;
+    pointer-events: none;
+}
