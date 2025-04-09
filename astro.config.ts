@@ -10,7 +10,7 @@ export default defineConfig({
                 light: "./src/assets/logo.svg",
                 dark: "./src/assets/logo.svg",
             },
-            favicon: "./src/assets/logo.svg",
+            favicon: "/favicon.svg",
             sidebar: [
                 {
                     label: "Alpha Sapphire",
